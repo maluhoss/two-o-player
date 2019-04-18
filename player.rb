@@ -1,7 +1,8 @@
-class Player {
-  attr_accessor :lives :score
+class Player
+  attr_accessor :name, :lives, :score
 
-  def initialize
+  def initialize(name)
+    @name = name
     @lives = 3
     @score = 0
   end
@@ -21,6 +22,8 @@ class Player {
   def alive?
     self.lives > 0
   end
-end
 
-}
+  def end_score
+    "#{self.score} / 3"
+  end
+end
